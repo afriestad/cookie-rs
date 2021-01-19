@@ -1,6 +1,10 @@
 # Difference from SergioBenitez/cookie-rs
 
-This fork is exactly the same, except the branch v0.11 has been patched to cherry-pick commit ae6d4230cac4d3230ae848c76de0862835ecaa8e, which means it supports the latest version of `SameSite` and sets `SameSite=None` explicitly when you `.same_site(SameSite::None)`. _THIS IS A BREAKING CHANGE: previously v0.11 supported the previous draft where `None` was the default, and as such impicit. The new draft changed the default, meaning old browsers default to `SameSite=None` and new browsers default to `SameSite=Lax`._ [Make sure you understand what this means (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite).
+This fork is exactly the same, except the branch v0.11 has been patched to cherry-pick commit ae6d4230cac4d3230ae848c76de0862835ecaa8e, which means it supports the latest version of `SameSite` and sets `SameSite=None` explicitly when you `.same_site(SameSite::None)`. No branches in this fork will receive more updates, with the sole exception of the `v0.11` branch in case a new `0.11.x` release is published before `rocket@0.5` releases.
+
+_THIS IS A BREAKING CHANGE: previously v0.11 supported the previous draft where `None` was the default, and as such impicit. The new draft changed the default, meaning old browsers default to `SameSite=None` and new browsers default to `SameSite=Lax`._
+
+[Make sure you understand what this means (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite).
 
 ## Use the patch
 
